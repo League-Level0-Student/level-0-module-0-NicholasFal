@@ -1,16 +1,44 @@
 package _03_print_and_popups._4_quiz_game;
 
+import javax.swing.JOptionPane;
+
 public class QuizGame {
 	public static void main(String[] args) {
 		
 		// Create a variable to hold the user's score. Set it equal to zero. 
-		
+		int score = 0;
 		// ASK A QUESTION AND CHECK THE ANSWER
-		
+		String questionOne = JOptionPane.showInputDialog("What is 33% of 200?");
 				// 2.  Ask the user a question 
 				
 				// 3.  Use an if statement to check if their answer is correct
+				if(questionOne.equals("66") ) {
+					JOptionPane.showMessageDialog(null,"Correct!");
+					score++;
+				} else {
+					JOptionPane.showMessageDialog(null,"Incorrect!");
+				}
+				String questionTwo = JOptionPane.showInputDialog("What is 33% of 400?");
+				// 2.  Ask the user a question 
 				
+				// 3.  Use an if statement to check if their answer is correct
+				if(questionTwo.equals("132") ) {
+					JOptionPane.showMessageDialog(null,"Correct!");
+					score++;
+				} else {
+					JOptionPane.showMessageDialog(null,"Incorrect!");
+				}
+				String questionThree = JOptionPane.showInputDialog("What is 46% of 250?");
+				// 2.  Ask the user a question 
+				
+				// 3.  Use an if statement to check if their answer is correct
+				if(questionThree.equals("115") ) {
+					JOptionPane.showMessageDialog(null,"Correct!");
+					score++;
+				} else {
+					JOptionPane.showMessageDialog(null,"Incorrect!");
+				}
+				JOptionPane.showMessageDialog(null,"Your score is: " + score);
 				// 4.  if the user's answer was correct, add one to their score 
 		
 		// MAKE MORE QUESTIONS. Ask more questions by repeating the above 

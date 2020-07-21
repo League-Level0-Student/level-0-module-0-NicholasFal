@@ -6,29 +6,30 @@ public class MadlibsOfTheAmazon {
 	
 	public static void main(String[] args) {
 		// Put this sentence in a pop up:
-		JOptionPane =  "If you find yourself having to cross a piranha-infested river, here's how to do it...";
+		JOptionPane.showMessageDialog(null,"If you find yourself having to cross a piranha-infested river, here's how to do it...");
 		
 		// Get the player to enter an adjective
-
+		String input = JOptionPane.showInputDialog("Enter an Adjective:");
 		// Get the player to enter a type of liquid
-
+		String inputTwo = JOptionPane.showInputDialog("Enter a Liquid:");
 		// Get the player to enter a body part
-
+		String inputThree = JOptionPane.showInputDialog("Enter a Body Part:");
 		// Get the player to enter a verb
-
+		String inputFour = JOptionPane.showInputDialog("Enter a Verb:");
 		// Get the player to enter a place
-
+		String inputFive = JOptionPane.showInputDialog("Enter a Place:");
 		// The story below has has been written as a group of Strings joined together by + signs.
 		// The story contains place holders, indicated by [** **] which you need to replace with
 		// the values entered by the player.
 		// Hint:  You will need to add more + signs to join the variables to the other parts of the story.
 		
 		String story = 
-		"Piranhas are more [**adjective**] during the day, so cross the river at\n"  +
-		"night. Piranhas are attracted to fresh [**type of liquid**] and will most\n"  +
-		"likely take a bite out of your [**body part**] if you [**verb**]. Whatever\n"  +
+		"Piranhas are more" + input + "during the day, so cross the river at\n"  +
+		"night. Piranhas are attracted to fresh " + inputTwo + "and will most\n"  +
+		"likely take a bite out of your " + inputThree +  "if you " + inputFour + ". Whatever\n"  +
 		"you do, if you have an open wound, try to find another way to get\n"  +
-		"back to the [**place**]. Good luck!";
+		"back to the " + inputFive + ". Good luck!";
+		System.out.println(story);
 		
 		// Make a pop-up that contains the final story. The \n escape characters add line breaks to the story. 
 		// If you need to, move them around to make your story look better in the pop-up
