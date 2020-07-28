@@ -54,7 +54,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		//5.  Run your program and move your mouse over the START COLOR. A number will be printed to the console
 		
 		
-		int startColor= -16731905;
+		int startColor= -8579847;
 		//6. Change the value of this startColor variable to the number printed in the previous step. 
 		
 		
@@ -66,7 +66,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 		
 		//7. Make a new int variable for the background color of the maze
-		int backroundColor = -16777216;
+		int backroundColor = -453612;
 		
 		//8. Run the program and move the mouse over the BACKGROUND COLOR. 
 		//   Use the number that is printed to the console to set the background color variable 
@@ -78,10 +78,14 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		
 			//9. If the mouse falls off the path (which means it is on the background color)
 			//		call the scare method - scare();
-			
+			if(mouseColor == backroundColor) {
+				scare();
+			}
 			//13.  If the mouse is on the end color, pop up a message to tell them they won!
 			//    (you will need to get the number of the END COLOR by moving the mouse over it)
-
+			if(mouseColor == -15402695) {
+				JOptionPane.showMessageDialog(null, "You Won!");
+			}
 					
 			
 		}	
@@ -108,7 +112,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 		//12. Find a scary image and drop it into the section5 package. 
 		//    Use the showScaryImage method below and send it the name of your picture file
-		
+		showScaryImage("scaryghost.png");
 		
 	}
 	
@@ -134,11 +138,11 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		}
 	}
 
-	private void showScaryImage(String imageName) {
+	private void showScaryImage(String scaryghost) {
 		try {
-			maze = ImageIO.read(getClass().getResource(imageName));
+			maze = ImageIO.read(getClass().getResource(scaryghost));
 		} catch (Exception e) {
-			System.err.println("Could not find this image: " + imageName);
+			System.err.println("Could not find this image: " + scaryghost);
 		}
 		repaint();
 	}
